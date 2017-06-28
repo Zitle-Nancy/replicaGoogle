@@ -1,0 +1,72 @@
+@import 'fonts';
+@import 'colors';
+@import 'tamanos';
+body{
+	margin :0;
+	padding :0;
+	width : 100%;
+	height: 100%;
+}
+/*grid*/
+.container{
+	width: 100%;
+	// border:solid 1px red;
+}
+.templateRow{
+	content:" ";
+	display: table;
+}
+.row{
+	&:before{
+		@extend .templateRow;
+	}
+	&:after{
+		@extend .templateRow;
+		clear: both;
+	}
+}
+[class*= "col-"]{
+	min-height: 7px;
+	// padding: 12px;
+	float:left;
+}
+[class*= "colV-"]{
+	min-height: 7px;
+	// padding: 12px;
+	float:left;
+}
+@function anchoDeColumnas($i){
+	@return percentage(($i/12));
+}
+@for $i from 1 through 12{
+	.col-#{$i}{
+		width: anchoDeColumnas($i);
+	}
+}
+@function columnasVacias($cV){
+	@return percentage(($cV/12));
+}
+@for $cV from 1 through 12{
+	.colV-#{$cV}{
+		margin-left:columnasVacias($cV);
+	}
+}
+
+/*estilos*/
+.logo{
+	text-align: $texto-centrado;
+	width:100%;
+	margin-top:50px;
+};
+a{
+	text-decoration:none; 
+	color:$texto-negro;
+	margin-left:15px;
+};
+.fila-una{
+	margin-top:50px;
+	img{
+		width:$ancho-total;
+	}
+}
+
