@@ -162,4 +162,17 @@ h2 {
   font-family: Product Sans;
   text-align: justify; }
 
+#seccion-listas {
+  background: #F1F3F4; }
+
+#seccion-listas li, #seccion-listas p {
+  font-size: 18px;
+  line-height: 34px;
+  margin-bottom: 32px;
+  font-family: Product Sans;
+  color: #414549; }
+#seccion-listas p {
+  margin-left: 20px;
+  padding-top: 40px; }
+
 /*# sourceMappingURL=style.css.map */
