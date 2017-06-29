@@ -52,6 +52,9 @@ body{
 	}
 }
 /*estilos*/
+.texto-justificado{
+	text-align:justify;
+}
 .padding-laterales{
 	padding-left:35px;
     padding-right:60px;
@@ -113,7 +116,6 @@ h2{
 	font-size: 18px;
     line-height: 34px;
     color: $color-txtD;
-    text-align: justify;
 }
 .puntos{
 	font-size: 18px;
@@ -123,6 +125,8 @@ h2{
 }
 #seccion-listas{
 	background:$seccion-azul;
+	margin-left:30px;
+	margin-right: 60px;
 	
 }
 #seccion-listas{
@@ -138,4 +142,10 @@ h2{
 		margin-left: 20px;
 		padding-top: 40px;
 	}
+}
+#experiencia{
+	font-size: 18px;
+    line-height: 34px;
+    font-family: $fuente-principal;
+    color:$color-txtD;
 }
